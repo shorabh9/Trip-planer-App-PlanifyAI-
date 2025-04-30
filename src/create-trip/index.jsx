@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { AI_PROMPT, SelectBudgetOptions,SelectTravelList } from '../components/constants/options'
+import { AI_PROMPT, SelectBudgetOptions,SelectTravelList } from '../components/constants/Options'
 import { useGoogleLogin } from '@react-oauth/google';
 import { Button } from "@/components/ui/button"
 import OSMAutocomplete from '../services/PlaceAPI';
