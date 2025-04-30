@@ -92,8 +92,6 @@ function Header() {
             }
           
         </div>
-        <div><button className=' p-2  mx-2  my-2 cursor-pointer bg-red-400 ' onClick={login}>Sign in with Google</button>
-       </div>
         <Dialog open={openDailog}>
                      
                      <DialogContent>
