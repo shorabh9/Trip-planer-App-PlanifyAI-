@@ -54,8 +54,10 @@ function Header() {
         GetUserProfile(codeResp); // <-- Call the function to get profile data
       },
       onError: (error) => {
-        console.error('Login Error:', error);
-      }
+        console.error('Login Error:', error);,
+        
+      },
+      redirect_uri: 'https://trip-planer-app-planify.vercel.app',
     });
     
   return (
