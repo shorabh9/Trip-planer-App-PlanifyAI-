@@ -57,7 +57,7 @@ function Header() {
         console.error('Login Error:', error);
         
       },
-      redirect_uri: 'https://trip-planer-app-planify.vercel.app',
+      redirect_uri: 'https://trip-planer-app-planify-ai.vercel.app'
     });
     
   return (
