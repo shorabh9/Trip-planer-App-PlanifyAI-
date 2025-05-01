@@ -9,30 +9,55 @@ import { GoogleOAuthProvider } from '@react-oauth/google'
 import Viewtrip from './view-trip/[tripId]/index.jsx'
 import MyTrip from './components/custom/MyTrip.jsx'
 
-const router =createBrowserRouter([
+// Create a Layout component that includes the Header
+function Layout({ children }) {
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  );
+}
+
+const router = createBrowserRouter([
   {
-    path:'/',
-    element:<App/>
+    path: '/',
+    element: (
+      <Layout>
+        <App />
+      </Layout>
+    )
   },
   {
     path: '/create-trip',
-    element:<CreateTrip/>
+    element: (
+      <Layout>
+        <CreateTrip />
+      </Layout>
+    )
   },
   {
-    path:'/view-trip/:tripId',
-    element:<Viewtrip/>
+    path: '/view-trip/:tripId',
+    element: (
+      <Layout>
+        <Viewtrip />
+      </Layout>
+    )
   },
   {
-    path:'/my-trips',
-    element:<MyTrip/>
+    path: '/my-trips',
+    element: (
+      <Layout>
+        <MyTrip />
+      </Layout>
+    )
   }
-])
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_AUTH_CLIENT_ID}  >
-      <Header/>
-      <RouterProvider router={router}/>
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_AUTH_CLIENT_ID}>
+      <RouterProvider router={router} />
     </GoogleOAuthProvider>
   </StrictMode>,
 )
