@@ -71,10 +71,10 @@ function Header() {
             {
                 user?
                  <div className=' flex gap-[20px] ' >
-                <div onClick={() => (window.location.href = '/create-trip')} className=' xl:p-2 xl:text-[15px] border rounded-2xl items-center flex text-[13px] p-1 cursor-pointer hover:bg-gray-200  '>+ Create Trip</div>
-                <a href='/my-trips' >
+                <Link to="/create-trip" className=' xl:p-2 xl:text-[15px] border rounded-2xl items-center flex text-[13px] p-1 cursor-pointer hover:bg-gray-200  '>+ Create Trip</Link>
+                <Link to='/my-trips' >
                  <div className=' cursor-pointer border text-[13px]  p-2 xl:text-[15px] rounded-2xl hover:bg-gray-200  ' >My Trips</div>
-                </a>
+                </Link>
                  <Popover>
                   <PopoverTrigger><img className=' rounded-[100%] size-[40px] cursor-pointer ' src={user.picture} alt='' /> </PopoverTrigger>
                  <PopoverContent>
