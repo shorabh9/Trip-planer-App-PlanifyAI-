@@ -41,7 +41,7 @@ function Header() {
           console.log("hello veere",resp.data); // Usually, resp.data contains the user info
           localStorage.setItem('user', JSON.stringify(resp.data));
           setOpenDailog(false);
-          window.location.reload();
+          // window.location.reload();
         })
         .catch((err) => {
           console.error('Error fetching user profile:', err);
@@ -57,7 +57,7 @@ function Header() {
         console.error('Login Error:', error);
         
       },
-      redirect_uri: 'https://trip-planer-app-planify-ai.vercel.app'
+      
     });
     
   return (
@@ -76,7 +76,7 @@ function Header() {
                  <div className=' cursor-pointer border text-[13px]  p-2 xl:text-[15px] rounded-2xl hover:bg-gray-200  ' >My Trips</div>
                 </a>
                  <Popover>
-                  <PopoverTrigger><img className=' rounded-[100%] size-[40px] cursor-pointer ' src={user.picture} /> </PopoverTrigger>
+                  <PopoverTrigger><img className=' rounded-[100%] size-[40px] cursor-pointer ' src={user.picture} alt='' /> </PopoverTrigger>
                  <PopoverContent>
                   <h2 onClick={() => {
                       googleLogout();
