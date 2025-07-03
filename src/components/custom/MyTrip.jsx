@@ -1,6 +1,6 @@
 import { collection, doc, getDocs, query, where } from 'firebase/firestore';
 import React, { useEffect } from 'react'
-import { Navigate,useNavigation } from 'react-router-dom';
+import { Navigate,useNavigation ,Link} from 'react-router-dom';
 import { db } from '../../services/firebaseConfig';
 import { useState } from 'react';
 
@@ -41,7 +41,7 @@ function MyTrip() {
                 {
                    trips.length > 0 ? (
                     trips.map((trip) =>(
-                        <a href={`/view-trip/${trip.id}`} >
+                        <Link to={`/view-trip/${trip.id}`} >
                         <div className='hover:scale-105 transition-transform duration-300  rounded-2xl p-3    cursor-pointer  flex flex-col  mt-[30px] ' >
                            <img className='  rounded-2xl  w-[300px] ' src='/trip.jpg'/>
                             <h1 className=' font-bold ' >{trip?.userSelection?.location}</h1>
@@ -49,7 +49,7 @@ function MyTrip() {
                                 <p className=' text-gray-400 '>{trip?.userSelection?.noOfDays} Days trip </p>
                                 <p className=' text-gray-400 ' > with {trip?.userSelection?.budget} Budget </p>  
                             </div>
-                           </div></a>
+                           </div></Link>
                     ))
                    ) : <div className='  text-[40px] font-serif    mt-[50px] flex flex-col items-center justify-center  ' >No trips found</div>
                 }
