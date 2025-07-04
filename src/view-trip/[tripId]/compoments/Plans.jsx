@@ -15,10 +15,10 @@ function Plans({ trip }) {
                 {
                   plan?.places.map((visit, visitIndex) => (
                     <Link to={'https://www.google.com/maps/search/?api=1&query=' + visit?.placeName + " , " + trip?.userSelection?.location} target='_blank'>
-                      <div key={visitIndex} className='hover:scale-105 transition-transform duration-300' >
+                      <div key={visitIndex} className='hover:scale-105 transition-transform duration-300  ' >
                         <h2 className='text-orange-600 mt-[15px]  '>{visit?.bestTimeToVisit}</h2>
-                          <div className='shadow-xl cursor-pointer mt-[5px] flex gap-[20px] border border-gray-300 rounded-2xl p-3'>
-                            <img className='w-[200px] rounded-2xl' src='/place.jpg' alt='place'/>
+                          <div className='inline-flex flex-col sm:flex-row gap-[20px] mt-[5px] border border-gray-300 rounded-2xl p-3 shadow-xl cursor-pointer w-auto'>
+                            <img className='w-[200px] flex justify-center rounded-2xl' src='/place.jpg' alt='place'/>
                             <div className='gap-[5px]'>
                               <h1 className='font-bold text-[18px]'>{visit?.placeName}</h1>
                               <p className='text-gray-400 text-[14px]'>{visit?.details}</p>
