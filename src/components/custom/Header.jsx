@@ -70,8 +70,8 @@ function Header() {
            
             {
                 user?
-                 <div className=' flex gap-[20px] ' >
-                <Link to="/create-trip" className=' xl:p-2 xl:text-[15px] border rounded-2xl items-center flex text-[13px] p-1 cursor-pointer hover:bg-gray-200  '>+ Create Trip</Link>
+                 <div className=' flex gap-[5px] xl:gap-[20px] md:gap-[20px] lg:gap-[20px]  ' >
+                <Link to="/create-trip" className=' xl:p-2 xl:text-[15px] border sm: rounded-2xl items-center flex text-[13px] p-1 cursor-pointer hover:bg-gray-200  '>+ Create Trip</Link>
                 <Link to='/my-trips' >
                  <div className=' cursor-pointer border text-[13px]  p-2 xl:text-[15px] rounded-2xl hover:bg-gray-200  ' >My Trips</div>
                 </Link>
